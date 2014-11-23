@@ -1,0 +1,148 @@
+<!-- Reference: http://stackoverflow.com/questions/6674341/how-to-use-scrollview-in-android -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+   	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <!-- Reference complete -->
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:background="@color/white"
+	    tools:context="ie.mydit.burke.stefan.stefshop.MainActivity" >
+
+	    <TextView
+	        android:id="@+id/welcome"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:lines="2"
+	        android:textIsSelectable="true"
+	        android:text="@string/welcomeMsg"
+	        android:textStyle="bold"
+	        android:textSize="40sp"
+	       	android:layout_alignParentTop="true"
+	       	android:gravity="center" />
+	    	
+	    <ImageView
+	        android:id="@+id/logo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/welcome"
+	        android:layout_centerInParent="true"
+	        android:src="@drawable/logo"
+	        android:contentDescription="@string/logo" />
+	    
+	    <TextView
+	        android:id="@+id/note1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:lines="4"
+	        android:textIsSelectable="true"
+	        android:text="@string/note1"
+	        android:textStyle="normal"
+	        android:textSize="20sp"
+	       	android:layout_below="@+id/logo"
+	       	android:gravity="center" />
+	    
+	    <TextView
+	        android:id="@+id/note2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:lines="2"
+	        android:textIsSelectable="true"
+	        android:text="@string/note2"
+	        android:textStyle="normal"
+	        android:textSize="20sp"
+	       	android:layout_below="@+id/note1"
+	       	android:gravity="center"
+	       	android:paddingBottom="30dp" />
+	    
+	    <EditText
+		    android:id="@+id/usrName"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/note2"
+	        android:inputType="textCapWords"
+	        android:gravity="center"
+	        android:hint="@string/input_name" />
+	    
+		<RadioGroup
+	        android:id="@+id/sex"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:orientation="horizontal"
+	        android:paddingTop="30dp"
+	        android:layout_centerInParent="true"
+	        android:layout_below="@+id/usrName" >
+	        
+	    <RadioButton 
+	        android:id="@+id/male"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/radio_male" />
+	    
+	    <RadioButton 
+	        android:id="@+id/female"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/radio_female" />
+	    
+	    </RadioGroup>
+	    
+	     <Spinner
+	        android:id="@+id/jobSpinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/sex"
+	        android:paddingTop="30dp"
+	        android:prompt="@string/job_prompt"
+	        android:gravity="center"
+	        android:entries="@array/jobs_array" />
+	    
+	    <EditText
+		    android:id="@+id/usrAge"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/jobSpinner"
+	        android:inputType="phone"
+	        android:paddingTop="30dp"
+	        android:gravity="center"
+	        android:hint="@string/input_age" />
+	    
+	    <EditText
+		    android:id="@+id/usrFunds"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/usrAge"
+	        android:inputType="phone"
+	        android:paddingTop="30dp"
+	        android:gravity="center"
+	        android:hint="@string/input_funds" />
+	    
+	    <EditText
+		    android:id="@+id/usrEmail"
+		    android:inputType="textEmailAddress"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/usrFunds"
+	        android:paddingTop="30dp"
+	        android:gravity="center"
+	        android:hint="@string/input_email" />
+	    
+	    <Button
+	        android:id="@+id/start"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/start"
+	       	android:gravity="center"
+	       	android:layout_centerInParent="true"
+	        android:layout_below="@+id/usrEmail"
+	        android:layout_marginTop="5dp" />
+	    
+	</RelativeLayout>
+</ScrollView>
